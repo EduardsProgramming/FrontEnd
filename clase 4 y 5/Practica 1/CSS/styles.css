@@ -1,0 +1,85 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/imagen.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight:100; 
+    font-style: normal;
+    /*background-color: aquamarine; */
+}
+
+ul li {
+    list-style-type: none;
+    /*le saca los items de listado */
+
+}
+
+a {
+    text-decoration: none;
+    color: bisque
+}
+
+header {
+    background-color: brown;
+    padding: 20px;
+    cursor: text;
+    font-family: 'Arial', sans-serif;
+    /* display:none; no muestra ni ocupa espacio el header con esta instrucción 
+    visibility: hidden  El elemento no se muestra, pero sigue ocupando su espacio 
+    en la página.
+    */
+}
+
+h1 {
+    color: wheat;
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 100;
+    background-color: black;
+    text-align: center;
+}
+
+p {
+    /*asi aplica a todos los párrafos. Las clases me permiten restringir a qué elemento aplicarle el formato  */
+    color: blueviolet;
+    font-size: 25px;
+}
+
+span {
+    font-size: 0.65em;
+    /* la medida de un em la toma a partir del font-size de p porque el span está dentro de p * Si fuera rem es partiendo de 16 pixeles siempre/
+    color:rgb(32, 10, 52)*/
+    color: antiquewhite;
+}
+
+.orange {
+    /* a toda etqiueta que le ponga esta clase tendra las propiedades aquí definidas*/
+    color: orange;
+    background-color: blue
+}
+
+#nuevoid {
+    color: black;
+    font-size: 95px;
+
+}
+
+.padre {
+    width: 100vw;
+    /*representa todo el ancho del navegador*/
+    background-color: lightgray;
+}
+
+.hijo {
+    width: 80%;
+    background-color: coral;
+}
