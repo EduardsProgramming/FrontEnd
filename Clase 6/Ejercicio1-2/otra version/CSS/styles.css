@@ -1,0 +1,71 @@
+.Precio {
+    color: rgb(240, 107, 107);
+}
+
+button {
+    padding: 3px 19px;
+    margin-top: auto; /* Para que el botón se quede abajo */
+}
+
+i.fa-regular {
+    color: rgb(76, 61, 215);
+    font-size: 28px;
+}
+
+.productos {
+    display: flex;
+    gap: 20px; /* Espacio entre productos */
+    padding: 20px;
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    flex-wrap: wrap; /* Por si se achica la pantalla, que bajen en fila */
+    min-height: 90vh; /* Ocupa casi toda la pantalla vertical */
+    align-items: stretch; /* Que las tarjetas tengan la misma altura */
+}
+
+.productos article {
+    flex: 1 1 300px; /* crece, se encoge, base 300px */
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Que ocupe toda la altura del contenedor productos */
+    max-height: none; /* Quitar límite para que se estire */
+}
+
+.img {
+    width: 100%;           /* se ajusta al ancho del contenedor */
+    max-height: 60vh;      /* máximo 40% de la altura del viewport */
+    height: auto;          /* mantiene la proporción original */
+    display: block;
+    border-radius: 10px;   /* opcional */
+    object-fit: contain;   /* evita distorsión */
+    margin-bottom: 10px;
+}
+
+/* Mantengo el estilo del menú igual */
+.nav-list {
+    display: flex;
+    justify-content: space-around; /* o space-between según prefieras */
+    list-style: none; /* elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    background-color: #0e33b5; /* color de fondo barra */
+}
+
+.nav-list li a {
+    text-decoration: none; /* quita subrayado */
+    color: white; /* color del texto */
+    padding: 15px 20px; /* espacio alrededor del texto */
+    display: block; /* para que el padding funcione bien */
+    font-weight: bold;
+}
+
+.nav-list li a:hover {
+    background-color: #f02b94; /* efecto hover */
+    border-radius: 5px;
+}

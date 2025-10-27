@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --header-padding-vertical: 16px;   /* padding original vertical */
+  --header-padding-horizontal: 24px; /* padding original horizontal */
+  --header-padding-vertical-small: 8px; /* padding cuando está "scrolled" */
+  --header-font-size: 1.3rem;
+  --header-font-size-small: 1rem;
+}
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #222;
+}
+
+/* ===== HEADER STICKY ===== */
+.sticky-header {
+  position: sticky; /* Hace que el header se pegue */
+  top: 0;           /* Lo fija en la parte superior */
+  background-color: #ffffff; /* Fondo sólido para que no se vea el contenido detrás */
+  padding: var(--header-padding-vertical) var(--header-padding-horizontal);
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Lo mantiene por encima del contenido */
+
+  /* Transiciones para animar compresión/ocultado */
+  transition: transform 220ms ease, padding 220ms ease, box-shadow 220ms ease;
+  will-change: transform, padding;
+}
+
+/* Estado al scrollear: header más pequeño (clase añadida por JS) */
+.sticky-header.scrolled {
+  padding: var(--header-padding-vertical-small) var(--header-padding-horizontal);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Clase que oculta el header (scroll hacia abajo) */
+.sticky-header.hide {
+  transform: translateY(-120%); /* lo saca hacia arriba */
+}
+
+/* Estilo del título dentro del header */
+.sticky-header h1 {
+  font-size: var(--header-font-size);
+  color: #333;
+  text-align: center;
+  transition: font-size 220ms ease;
+}
+
+/* Reducir tamaño del h1 cuando está scrolled */
+.sticky-header.scrolled h1 {
+  font-size: var(--header-font-size-small);
+}
+
+/* ===== CONTENIDO ===== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Cada sección separada para poder scrollear */
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+section p {
+  text-align: justify;
+}
+
+/* Compatibilidad con usuarios que prefieren reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .sticky-header,
+  .sticky-header.scrolled,
+  .sticky-header.hide,
+  .sticky-header h1 {
+    transition: none !important;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .sticky-header {
+    padding: 12px 16px;
+  }
+
+  .sticky-header h1 {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  /* Ajuste del estado scrolled en pantallas pequeñas */
+  .sticky-header.scrolled {
+    padding: 8px 16px;
+  }
+}

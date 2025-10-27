@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(54, 19, 19);
+    color: antiquewhite;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Grid centrado y responsivo */
+.grid-example {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px; /* limita ancho total del grid */
+    margin: 20px auto; /* centra horizontalmente */
+}
+
+.card {
+    background-color: lightcoral;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/*  EN  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+auto-fit le dice al navegador:
+
+"Crea tantas columnas como entren en el contenedor".
+
+En lugar de un número fijo de columnas (como 3), el grid se adapta al ancho disponible.
+
+Esto hace que el grid sea responsivo, porque si la pantalla se achica, automáticamente hay menos columnas.  */
+
+#contacto {
+    display: flex;           /* activa flexbox */
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    padding: 40px 20px;      /* espacio alrededor */
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;  /* organiza inputs de arriba hacia abajo */
+    gap: 15px;               /* espacio entre los inputs */
+    max-width: 400px;        /* ancho máximo del formulario */
+    width: 100%;             /* ocupa todo el ancho disponible hasta 400px */
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}

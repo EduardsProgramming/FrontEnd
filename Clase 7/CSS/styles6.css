@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+
+  /* Definimos áreas nombradas */
+  grid-template-areas:
+    "header header header"
+    "sidebar content content";
+}
+
+.header { grid-area: header; background-color: lightblue; }
+.sidebar { grid-area: sidebar; background-color: lightgreen; }
+.content { grid-area: content; background-color: lightcoral; }

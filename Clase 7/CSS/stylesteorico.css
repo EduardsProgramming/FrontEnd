@@ -1,0 +1,18 @@
+.container{
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Una columna de 200px y otra que ocupa el espacio restante  1fr: 1 fraccion   */
+    grid-template-rows: auto 1fr auto; /* tres filas, la del medio se ocupa el espacio restante, es flexible */
+    gap: 40px; /* Espacio entre los elementos */
+}
+.header {
+    grid-column: 1 / 3; /* La cabecera ocupa las 2 columnas */
+}
+.menu{
+    grid: 1/2; /* El menu ocupa la primer columna  */
+}
+.main{
+    grid-column: 2 / 3; /* El contenido principal ocupa la segunda columna */ 
+}
+.footer{
+    grid-column: 1 / 3; /* El pie de página también ocupa las 2 columnas */ 
+}

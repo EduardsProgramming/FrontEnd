@@ -1,0 +1,20 @@
+body{
+    background-color:rgb(255, 235, 197);
+}
+
+.contenedor {
+    display: flex;
+    gap: 10px; /* espacio entre cajas */
+    padding: 20px;
+}
+
+.contenedor p {
+    flex-grow: 1; /* con 1 hace que crezcan los elementos hasta ocupar todo el main axis */
+    /* flex-shrink: 5;/* Hace que el elemento se achique. Con valor 0 no se achica */
+    /* flex-basis: es una propiedad que se usa para establecer el tamano inicial de un elemento flex antes de que se aplique flex.grow o flex-shrink*/ 
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #000;
+}

@@ -1,0 +1,59 @@
+/* Contenedor principal que crea el grid padre */
+.container {
+  display: grid; /* Activa CSS Grid en este contenedor */
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr; /* Define 5 columnas:
+     - Primera columna fija de 100px
+     - Las otras 4 columnas toman fracciones iguales del espacio disponible */
+  gap: 10px; /* Espacio de 10px entre filas y columnas */
+  padding: 10px; /* Espacio interno alrededor del contenido dentro del contenedor */
+  background-color: #f0f0f0; /* Color de fondo gris claro */
+}
+
+/* Primer hijo directo del grid .container */
+.item1 {
+  display: grid; /* Este elemento también se convierte en un grid container */
+  grid-template-columns: repeat(3, 1fr); /* Define 3 columnas iguales dentro de item1 */
+  gap: 5px; /* Espacio de 5px entre columnas y filas internas */
+  grid-column: 1 / 4; /* Ocupa las columnas 1, 2 y 3 del grid padre (.container) */
+  background-color: lightblue; /* Fondo azul claro para diferenciar */
+  padding: 10px; /* Espacio interno dentro de item1 */
+}
+
+/* Nietos dentro de item1, se posicionan dentro de su grid interno */
+
+/* Primer subitem */
+.subitem1 {
+  background-color: lightcoral; /* Fondo rojo coral */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 10px; /* Espacio interno alrededor del contenido */
+}
+
+/* Segundo subitem */
+.subitem2 {
+  background-color: lightgreen; /* Fondo verde claro */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Tercer subitem */
+.subitem3 {
+  background-color: lightyellow; /* Fondo amarillo claro */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Segundo hijo directo del grid principal */
+.item2 {
+  background-color: lightpink; /* Fondo rosa claro */
+  padding: 10px; /* Espacio interno */
+  text-align: center; /* Texto centrado */
+  grid-column: 4 / 5; /* Ubicado en la columna 4 del grid padre */
+}
+
+/* Tercer hijo directo del grid principal */
+.item3 {
+  background-color: lightgray; /* Fondo gris claro */
+  padding: 10px;
+  text-align: center;
+  grid-column: 5 / 6; /* Ubicado en la columna 5 del grid padre */
+}

@@ -1,0 +1,121 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --header-height: 72px; /* ajustar si querés otro alto */
+  --max-width: 1200px;
+}
+
+/* Body */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.6;
+  color: #222;
+  background: #f6f7fb;
+}
+
+/* Header fijo */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: linear-gradient(90deg, #ffffff, #f2f6ff);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+}
+
+/* Contenido interno del header */
+.header-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Título */
+.fixed-header h1 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f1724;
+}
+
+/* Nav simple */
+.fixed-header .nav a {
+  margin-left: 14px;
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 0.95rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.fixed-header .nav a:hover {
+  background: rgba(15, 23, 36, 0.06);
+}
+
+/* MAIN: importante -> padding-top igual a la altura del header */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 28px) 28px 80px; /* espacio arriba para que el contenido no quede oculto */
+}
+
+/* Secciones largas para provocar scroll */
+section {
+  background: #fff;
+  margin-bottom: 28px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(16,24,40,0.03);
+}
+section h2 {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #0f1724;
+}
+section p {
+  margin-bottom: 12px;
+  color: #334155;
+  text-align: justify;
+}
+
+/* Botón "ir arriba" fijo (opcional) */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+  color: #0f1724;
+  font-weight: 700;
+  z-index: 1300;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  :root { --header-height: 64px; }
+  .header-inner { padding: 0 16px; }
+  main { padding: calc(var(--header-height) + 20px) 16px 80px; }
+  .fixed-header h1 { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  :root { --header-height: 56px; }
+  .header-inner { padding: 0 12px; }
+  .fixed-header .nav { display: none; }
+  main { padding: calc(var(--header-height) + 18px) 12px 80px; }
+}

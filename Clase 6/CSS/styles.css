@@ -1,0 +1,58 @@
+*{
+	box-sizing: border-box; /*Para que tome la medida de las cajas desde el borde */
+ }
+
+ ul,ol,li{
+    list-style-type: none; /* para que las listas no traigan el tipo que viene por defecto, lo poenemos siempre al ppo de CCS */
+ }
+
+ h1 {
+    width: 250px;
+    height: 50px;
+    background-color: yellow;
+    padding: 10px ; /* es alejarse alrededor del contenmido para llegar al borde */
+    border: 2px dashed black; /*solid es el estilo de borde (tipo de linea) */
+    /* para el padding va arriba , al top del navegador, luego, va a la derecha (va en el sentido de las agujas del reloj) y si hay otro valor lo toma, sino usa el mismo valor. Despues va abajo y luego a la izquierda. Si hay un solo valor lo toma para todo. Si pongo 3 valores , el faltante lo iguala con el simetrico (si falta el de la izquierda toma el de la derecha) */
+    margin: 30px; /* aleja de cualquier otro elemento */
+}
+
+a{
+    background-color: orangered;
+    padding: 20px; /* es alejarse alrededor del contenmido para llegar al borde */
+    border: 2px dashed black; /*solid es el estilo de borde (tipo de linea) */
+    /* Como es un elemento en linea no se aceptan las medidas ancho y alto
+     */
+    margin-left: 40px; /* deja una sangria, hay varios tipos de Margin */
+}
+
+.box {
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  border: 2px solid #333;
+  margin: 100px;
+}
+
+span{
+    background-color: aquamarine;
+    width: 1000px; /* El width no lo afecta porque es un elemento en linea */
+    font-size: 25px;
+    display: inline-block; /* con esta modificación se le aplican atributos de elementos en bloque como el width */
+
+}
+
+nav li a {
+    display: inline-block;
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px; /* separación entre enlaces */
+}
+
+
+.contact a {
+    background-color: yellow;
+    border:solid;
+    color: black;
+}

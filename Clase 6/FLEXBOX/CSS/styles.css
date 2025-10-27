@@ -1,0 +1,18 @@
+body{
+    background-color:rgb(255, 235, 197);
+}
+
+div{
+    display:flex;
+    /* flex-direction: row-reverse; /* invierto el sentido de visualizacion  */
+    /*flex-direction: column; /* en vertical de arriba hacia abajo*/
+    /*flex-direction: column-reverse; /* en vertical de abajo hacia arriba) */
+    justify-content:center;   /* solo afecta al eje principal  */
+    align-items: center; /* respecto el cross axis*/
+    height: 700px; /* PAra que el align vertical tenga efecto  
+    Hay un juego, el flex box froggy para practicar uso de Flexbox */
+}
+
+p{
+    background-color: rgb(190, 240, 224);
+}

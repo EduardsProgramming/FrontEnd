@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <form action="./home.html" method="GET" autocomplete="on">
+        <div>
+            <label for="user">Usuario: <!-- el type email valida si lo que se ingresa tiene una @-->
+                <!--el for seguuido del texto entre comillas sirve para relacionar el label con el input -->
+                <input type="text" id="user" placeholder="nombre de usuario">
+                <!--id="nombre" relaciona el input con el label(tienen el mismo texto entre comillas) -->
+            </label>
+        </div>
+        <div>
+            <label for="contra">Contraseña:
+                <input type="password" id="contra">
+                <!--con el type="pass" oculta a medida que se escribe en el campo -->
+            </label>
+            <div>
+                <label>Asistió al meeting anual?
+                    <input type="checkbox">
+                    <!-- Devuelve valor TRUE si está marcado y FALSE si no está marcado Si pongo varios checkbox todos con el mismo valor en el atributo name , me va a dejar elegir varios-->
+                </label>
+            </div>
+            <p>Elija su deporte favorito</p>
+            <div>
+                <label>Voley
+                    <input type="radio" name="deporte">
+                    <!-- Hay que agregar el atributo name con el mismo valor a todos los radiobutton en los que solo se pueda elegir uno de ellos (y no todos en simultáneo)-->
+                </label>
+                <div>
+                    <label>Futbol
+                        <input type="radio" name="deporte">
+                    </label>
+                </div>
+                <div>
+                    <label>Basket
+                        <input type="radio" name="deporte">
+                    </label>
+                </div>
+
+                <div>
+                    <label>Cantidad de dias que lo practica
+                        <input type="number" name="deporte">
+                    </label>
+                </div>
+                <div>
+                    <p>Fecha en la que va a comenzar la actividad</p>
+                    <label>
+                        <input type="date">
+                    </label>
+                </div>
+                <div>
+                    <p>Suba su apto médico</p>
+                    <label>
+                        <input type="file">
+                    </label>
+                </div>
+                <div>
+                    <p>Elija el color de su remera</p>
+                    <label>
+                        <input type="color" name="color-remera">
+                    </label>
+                </div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+                
+    </form>
+
+</body>
+
+</html>
